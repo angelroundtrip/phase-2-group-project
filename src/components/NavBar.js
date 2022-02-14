@@ -2,13 +2,18 @@ import React from 'react'
 
 function NavBar() {
   return (
-    <div>NavBar
+    <div className='nav'>NavBar
+      <ul>
         <button>
-            Entries
+          Entries
         </button>
+      </ul>
+
+      <ul>
         <button>
-            About
+          About
         </button>
+      </ul>
     </div>
   )
 }
