@@ -1,10 +1,11 @@
-import '../App.css';
+import {Switch, Route} from 'react-router-dom'
 import About from './About';
 import Header from './Header';
 import JournalEntries from './JournalEntries';
-import JournalForm from './JournalForm';
+import JournalForm from './JournalForm'
 import NavBar from './NavBar';
 import styled, {css} from 'styled-components';
+import EntryViewer from './EntryViewer';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
   const CleanStyle = styled.div`
   display: grid;
   /* grid-template: auto 1fr auto / auto 1fr auto; */
-  ${layoutBox};
+  ${layoutBox}
 
   .header {
     grid-column: 1 / 3;
@@ -62,11 +63,22 @@ function App() {
   return (
     <CleanStyle >
 
-      <Header />
-      <NavBar />
-      <JournalEntries/>
-      {/* <JournalForm/> */}
-      {/* <About/> */}
+      <Header/>
+      <NavBar/>
+      <Switch>
+        <Route exact path='/'>
+          <JournalEntries/>
+        </Route>
+        <Route path='/new'>
+          <JournalForm/>
+        </Route>
+        <Route path='/about'>
+          <About/>
+        </Route>
+        <Route path='/:id'>
+          <EntryViewer/>
+        </Route>
+      </Switch> 
 
     </CleanStyle>
   );

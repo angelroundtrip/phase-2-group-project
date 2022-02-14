@@ -1,9 +1,14 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 function JournalEntries() {
   return (
-    <div className='journal-entries'>Journal Entries
+    <div className='journal-entries'>
+        <Link to='/new'>
+            <button>
+                Create new
+            </button>
+        </Link>
         <ul>
             <li>1</li>
             <li>2</li>

@@ -1,19 +1,29 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import About from './About'
+import JournalEntries from './JournalEntries'
 
 function NavBar() {
   return (
     <div className='nav'>NavBar
       <ul>
         <button>
-          Entries
+        <Link to='/'>
+            <JournalEntries/>
+        </Link>
         </button>
       </ul>
 
       <ul>
         <button>
-          About
+        <Link to='about'>
+            <About/>
+        </Link>
         </button>
       </ul>
+    
+        
+        
     </div>
   )
 }
