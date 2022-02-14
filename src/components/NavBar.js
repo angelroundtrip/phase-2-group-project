@@ -9,7 +9,7 @@ function NavBar() {
       <ul>
         <button>
         <Link to='/'>
-            <JournalEntries/>
+            Entries
         </Link>
         </button>
       </ul>
@@ -17,7 +17,7 @@ function NavBar() {
       <ul>
         <button>
         <Link to='about'>
-            <About/>
+        About
         </Link>
         </button>
       </ul>
