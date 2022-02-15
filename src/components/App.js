@@ -1,4 +1,4 @@
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, useHistory} from 'react-router-dom'
 import About from './About';
 import Header from './Header';
 import JournalEntries from './JournalEntries';
@@ -75,6 +75,7 @@ function App() {
       .then(setEntries)
   }, [] ) 
 
+  const history = useHistory()
 
   const newJournal = newEntry => {
     fetch(URL, {
@@ -82,7 +83,13 @@ function App() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(newEntry)
     })
-    setEntries([...entries, newEntry])
+    .then(r => r.json())
+    .then(data => {
+      history.push(`/${data.id}`)
+    
+      setEntries([...entries, data])
+    
+    })
   }
 
   const deleteEntry = entry => {

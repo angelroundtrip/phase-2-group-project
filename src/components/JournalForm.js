@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 
+
 function JournalForm({newJournal}) {
 
   const [name, setName] = useState('')
   const [date, setDate] = useState('')
   const [body, setBody] = useState('')
+
+  
 
   const submitNewEntry = e => {
     e.preventDefault()
@@ -14,8 +17,9 @@ function JournalForm({newJournal}) {
       date: date,
       body: body
     }
-
+    
     newJournal(newObj)
+
   }
  // We want to go to the journal viewer after submitting a new entry
   return (

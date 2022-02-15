@@ -7,17 +7,13 @@ function NavBar() {
     <div className='nav'>NavBar
       <ul>
         <button>
-        <Link to='/'>
-            Entries
-        </Link>
+          <Link to='/'>Entries</Link>
         </button>
       </ul>
 
       <ul>
         <button>
-        <Link to='about'>
-        About
-        </Link>
+          <Link to='about'>About</Link>
         </button>
       </ul>
     </div>
