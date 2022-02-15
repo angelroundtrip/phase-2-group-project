@@ -6,7 +6,7 @@ import JournalForm from './JournalForm'
 import NavBar from './NavBar';
 import styled, {css} from 'styled-components';
 import EntryViewer from './EntryViewer';
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function App() {
 
@@ -69,6 +69,9 @@ function App() {
       .then(setEntries)
   }, [] ) 
 
+  const handleForm = newObj => {
+    setEntries([...entries, newObj])
+  }
 
   return (
     <CleanStyle >
@@ -80,7 +83,7 @@ function App() {
           <JournalEntries entries={entries} />
         </Route>
         <Route path='/new'>
-          <JournalForm/>
+          <JournalForm handleForm={handleForm} />
         </Route>
         <Route path='/about'>
           <About/>
