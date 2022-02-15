@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import JournalListItem from './JournalListItem'
 
-function JournalEntries({entries}) {
+function JournalEntries({entries, deleteEntry}) {
   return (
     <div className='journal-entries'>
         <Link to='/new'>
@@ -11,11 +11,7 @@ function JournalEntries({entries}) {
             </button>
         </Link>
         <ul>
-            {entries.map(entry => 
-              <Link to='/:id'>
-                <JournalListItem entry={entry} key={entry.id} /> 
-              </Link>
-            )}
+            {entries.map(entry => <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}  /> )}
         </ul>
     </div>
   )

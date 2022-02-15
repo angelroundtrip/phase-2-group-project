@@ -65,22 +65,33 @@ function App() {
   } */
 `;
   
+  const URL = 'http://localhost:3000/entries'
+
   const [entries, setEntries] = useState([])
 
   useEffect( () => {
-    fetch('http://localhost:3000/entries')
+    fetch(URL)
       .then(r => r.json())
       .then(setEntries)
   }, [] ) 
 
 
   const updateJournal = newEntry => {
-    fetch('http://localhost:3000/entries', {
+    fetch(URL, {
       method: 'POST', 
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(newEntry)
     })
     setEntries([...entries, newEntry])
+  }
+
+  const deleteEntry = entry => {
+    const newListOfEntries = entries.filter(entryObj => entryObj.id !== entry.id)
+    setEntries(newListOfEntries)
+
+    fetch(URL + `/${entry.id}`, {
+      method: 'DELETE'
+    })
   }
 
   return (
@@ -90,7 +101,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path='/'>
-          <JournalEntries entries={entries} />
+          <JournalEntries entries={entries} deleteEntry={deleteEntry} />
         </Route>
         <Route path='/new'>
           <JournalForm updateJournal={updateJournal} />
