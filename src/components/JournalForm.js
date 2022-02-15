@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 function JournalForm({newJournal}) {
 
-  const [name, setName] = useState('')
+  const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
   const [body, setBody] = useState('')
 
@@ -13,7 +13,7 @@ function JournalForm({newJournal}) {
     e.preventDefault()
 
     const newObj = {
-      name: name,
+      title: title,
       date: date,
       body: body
     }
@@ -27,7 +27,7 @@ function JournalForm({newJournal}) {
       <form onSubmit={submitNewEntry}>
 
       <span>
-        <input className='form-input' type='text' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
+        <input className='form-input' type='text' placeholder='Title' value={title} onChange={e => setTitle(e.target.value)} />
       </span>
 
       <span>

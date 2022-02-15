@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function JournalListItem({entry, deleteEntry}) {
   return (
     <div>
-        <span>{entry.name}</span>
+        <span>{entry.title}</span>
         <span>{entry.date}</span>
         <span>{entry.body}</span>
         <Link to={`/${entry.id}`}>

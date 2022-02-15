@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import JournalListItem from './JournalListItem'
-import Card from '@mui/material/Card';
+// imort Card from '@mui/material/Card';p
 
 function JournalEntries({entries, deleteEntry}) {
   return (
