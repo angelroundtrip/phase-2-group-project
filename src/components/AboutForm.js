@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutForm() {
   return (
-    <div>AboutForm</div>
+    <div className='about'>AboutForm</div>
   )
 }
 

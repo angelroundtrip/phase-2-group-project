@@ -1,15 +1,21 @@
 {
   "entries": [
     {
-      "id": 1,
-      "name": "lorenzo",
-      "body": "this is my journal",
-      "date": "10-4-22"
+      "name": "Test",
+      "date": "Today",
+      "body": "Entry",
+      "id": 1
     },
     {
-      "name": "lol ",
-      "date": "lmao",
-      "body": "potato",
+      "name": "Hello",
+      "date": "Today",
+      "body": "Testing the entry page and whether or not it auto expands. It doesn't but lest's so how a block of text looks like.",
+      "id": 2
+    },
+    {
+      "name": "adsd",
+      "date": "asdAd",
+      "body": "aDads",
       "id": 3
     },
     {

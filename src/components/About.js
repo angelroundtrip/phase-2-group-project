@@ -3,7 +3,7 @@ import AboutForm from './AboutForm'
 
 function About() {
   return (
-    <div>About
+    <div className='about'>About
         <AboutForm/>
     </div>
   )

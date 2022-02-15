@@ -13,7 +13,7 @@ function EntryViewer() {
   }, [id] )
 
   return (
-    <div>EntryViewer
+    <div className='entry-viewer'>EntryViewer
       <h1>
         {viewer.name}
       </h1>
@@ -23,7 +23,9 @@ function EntryViewer() {
       <p>
         {viewer.body}
       </p> 
+      
     </div>
+
   )
 }
 

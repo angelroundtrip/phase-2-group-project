@@ -23,18 +23,22 @@ function JournalForm({newJournal}) {
   }
  // We want to go to the journal viewer after submitting a new entry
   return (
-    <div>
+    <div className="journal-form">
       <form onSubmit={submitNewEntry}>
-        <input type='text' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
-          
-        
-        <input type='text' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
-         
-        
-        <textarea type='text' placeholder='Entry' value={body} onChange={e => setBody(e.target.value)} />
 
-        <button type='submit'> HERE !</button>
-          
+      <span>
+        <input className='form-input' type='text' placeholder='Name' value={name} onChange={e => setName(e.target.value)} />
+      </span>
+
+      <span>
+        <input className='form-input' type='text' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
+      </span> 
+
+      <p>
+        <textarea className='entry-input' type='text' placeholder='Entry' value={body} onChange={e => setBody(e.target.value)} />
+      </p>
+
+        <div><button className='button' type='submit' style={{align:'center'}}> SUBMIT</button></div>
         
       </form>
     </div>
