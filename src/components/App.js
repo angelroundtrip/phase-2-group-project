@@ -28,11 +28,15 @@ function App() {
   ${layoutBox}
 
   .header {
-    grid-column: 1 / 3;
-    background: aqua;
-    padding: 1rem;
-    border-style: solid;
-  }
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  color: goldenrod;
+  border: 10px;
+  /* text-shadow: 2px 0 0 gold; */
+  -webkit-text-stroke: 1px navy;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
   .nav {
     grid-column: 1 / 2;
@@ -69,8 +73,14 @@ function App() {
       .then(setEntries)
   }, [] ) 
 
-  const handleForm = newObj => {
-    setEntries([...entries, newObj])
+
+  const updateJournal = newEntry => {
+    fetch('http://localhost:3000/entries', {
+      method: 'POST', 
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newEntry)
+    })
+    setEntries([...entries, newEntry])
   }
 
   return (
@@ -83,7 +93,7 @@ function App() {
           <JournalEntries entries={entries} />
         </Route>
         <Route path='/new'>
-          <JournalForm handleForm={handleForm} />
+          <JournalForm updateJournal={updateJournal} />
         </Route>
         <Route path='/about'>
           <About/>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function JournalForm({handleForm}) {
+function JournalForm({updateJournal}) {
 
   const [name, setName] = useState('')
   const [date, setDate] = useState('')
@@ -15,7 +15,7 @@ function JournalForm({handleForm}) {
       body: body
     }
 
-    handleForm(newObj)
+    updateJournal(newObj)
   }
  // We want to go to the journal viewer after submitting a new entry
   return (
