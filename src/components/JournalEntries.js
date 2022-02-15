@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import JournalListItem from './JournalListItem'
 
-function JournalEntries() {
+function JournalEntries({entries}) {
   return (
     <div className='journal-entries'>
         <Link to='/new'>
@@ -10,9 +11,7 @@ function JournalEntries() {
             </button>
         </Link>
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {entries.map(entry => <JournalListItem entry={entry} key={entry.id} /> )}
         </ul>
     </div>
   )

@@ -6,6 +6,7 @@ import JournalForm from './JournalForm'
 import NavBar from './NavBar';
 import styled, {css} from 'styled-components';
 import EntryViewer from './EntryViewer';
+import {useState, useEffect} from 'react'
 
 function App() {
 
@@ -64,6 +65,15 @@ function App() {
   } */
 `;
   
+  const [entries, setEntries] = useState([])
+
+  useEffect( () => {
+    fetch('http://localhost:3000/entries')
+      .then(r => r.json())
+      .then(setEntries)
+  }, [] ) 
+
+
   return (
     <CleanStyle >
 
@@ -71,7 +81,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path='/'>
-          <JournalEntries/>
+          <JournalEntries entries={entries} />
         </Route>
         <Route path='/new'>
           <JournalForm/>
