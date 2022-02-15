@@ -6,7 +6,7 @@ function JournalListItem({entry, deleteEntry}) {
     <div>
         <span>{entry.title}</span>
         <span>{entry.date}</span>
-        <span>{entry.body}</span>
+        <span>{entry.body.slice(0, 99)}</span>
         <Link to={`/${entry.id}`}>
             <p>see more</p>
         </Link>
