@@ -109,7 +109,7 @@ function App() {
         <Route path='/about'>
           <About/>
         </Route>
-        <Route path='/:id'>
+        <Route exact path='/:id'>
           <EntryViewer/>
         </Route>
       </Switch> 

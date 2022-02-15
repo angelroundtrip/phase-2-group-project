@@ -7,7 +7,7 @@ function JournalListItem({entry, deleteEntry}) {
         <p>{entry.name}</p>
         <p>{entry.date}</p>
         <p>{entry.body}</p>
-        <Link to='/:id'>
+        <Link to={`/${entry.id}`}>
             <p>see more</p>
         </Link>
         <button onClick= {() => deleteEntry(entry)}>
