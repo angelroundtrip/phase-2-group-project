@@ -76,7 +76,7 @@ function App() {
   }, [] ) 
 
 
-  const updateJournal = newEntry => {
+  const newJournal = newEntry => {
     fetch(URL, {
       method: 'POST', 
       headers: {'Content-Type': 'application/json'},
@@ -104,7 +104,7 @@ function App() {
           <JournalEntries entries={entries} deleteEntry={deleteEntry} />
         </Route>
         <Route path='/new'>
-          <JournalForm updateJournal={updateJournal} />
+          <JournalForm newJournal={newJournal} />
         </Route>
         <Route path='/about'>
           <About/>
