@@ -73,8 +73,17 @@ function App() {
       .then(setEntries)
   }, [] ) 
 
-  const handleForm = newObj => {
-    setEntries([...entries, newObj])
+  // const handleForm = newObj => {
+  //   setEntries([...entries, newObj])
+  // }
+
+  const updateJournal = newEntry => {
+    fetch('http://localhost:3000/entries', {
+      method: 'POST', 
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newEntry)
+    })
+    setEntries([...entries, newEntry])
   }
 
   return (
@@ -87,7 +96,7 @@ function App() {
           <JournalEntries entries={entries} />
         </Route>
         <Route path='/new'>
-          <JournalForm handleForm={handleForm} />
+          <JournalForm updateJournal={updateJournal} />
         </Route>
         <Route path='/about'>
           <About/>

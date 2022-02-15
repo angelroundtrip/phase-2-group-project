@@ -11,7 +11,7 @@ function JournalEntries({entries}) {
             </button>
         </Link>
         <ul>
-            {entries.map(entry => <JournalListItem entry={entry} key={entry.id} /> )}
+            {entries.map(entry => <JournalListItem key={entry.id} entry={entry}  /> )}
         </ul>
     </div>
   )

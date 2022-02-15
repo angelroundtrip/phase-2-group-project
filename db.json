@@ -1,10 +1,22 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "name": "lorenzo",
-            "body": "this is my journal",
-            "date": "10-4-22"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "name": "lorenzo",
+      "body": "this is my journal",
+      "date": "10-4-22"
+    },
+    {
+      "name": "lol",
+      "date": "lmao",
+      "body": "wizard",
+      "id": 2
+    },
+    {
+      "name": "lol ",
+      "date": "lmao",
+      "body": "potato",
+      "id": 3
+    }
+  ]
 }
