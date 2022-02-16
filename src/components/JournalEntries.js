@@ -16,8 +16,9 @@ function JournalEntries({entries, deleteEntry, handleSortClick}) {
         </button>
         {/* <Card sx={{ maxWidth: 345 }}> */}
             {entries.map(entry => 
-              <p> <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}  
-              />  </p> 
+              <span key={entry.id}> 
+                <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}/>  
+              </span> 
             )}
          
           {/* </Card> */}

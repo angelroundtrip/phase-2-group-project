@@ -134,6 +134,7 @@ function App() {
     width: 100vw;  */
     /* height: 780px */
     /* height: 100%; */
+    position: relative;
   }
 
   .form-input {
