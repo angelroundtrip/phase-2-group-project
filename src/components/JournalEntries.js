@@ -3,15 +3,17 @@ import {Link} from 'react-router-dom'
 import JournalListItem from './JournalListItem'
 // import Card from '@mui/material/Card';
 
-function JournalEntries({entries, deleteEntry}) {
+function JournalEntries({entries, deleteEntry, handleSortClick}) {
   return (
     <div className='journal-entries'>
         <Link to='/new'>
             <button className='button'>
                 Create new entry
             </button>
-        
         </Link>
+        <button onClick={handleSortClick} className='button'>
+          Sort
+        </button>
         {/* <Card sx={{ maxWidth: 345 }}> */}
             {entries.map(entry => 
               <p> <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}  

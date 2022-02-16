@@ -8,7 +8,7 @@ function JournalListItem({entry, deleteEntry}) {
 
   return (
     <div>
-        <span>{entry.title}</span> | <span>{entry.date}</span> | <span>{entry.body}</span>
+        <span>{entry.title}</span> | <span>{entry.date}</span> | <span>{entry.body.slice(0, 99)}</span>
         <Link to={`/${entry.id}`}>
             <button className='expand'>Expand</button>
         </Link>
