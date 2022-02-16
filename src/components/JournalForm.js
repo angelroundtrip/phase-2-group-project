@@ -31,7 +31,7 @@ function JournalForm({newJournal}) {
       </span>
 
       <span>
-        <input className='form-input' type='text' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
+        <input className='form-input' type='date' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
       </span> 
 
       <p>

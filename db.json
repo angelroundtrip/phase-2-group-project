@@ -1,34 +1,28 @@
 {
   "entries": [
     {
-      "title": "Test",
-      "date": "Today",
-      "body": "Entry",
-      "id": 1
+      "title": "Sorts of sorts",
+      "date": "2022-02-10",
+      "body": "hahaha",
+      "id": 6
     },
     {
-      "title": "Hello",
-      "date": "Today",
-      "body": "Testing the entry page and whether or not it auto expands. It doesn't but lest's so how a block of text looks like.",
-      "id": 2
+      "title": "lsdkfjsfs",
+      "date": "2022-02-13",
+      "body": "sdfsfs",
+      "id": 7
     },
     {
-      "title": "adsd",
-      "date": "asdAd",
-      "body": "aDads",
-      "id": 3
+      "title": "sdfsfsd",
+      "date": "2022-02-15",
+      "body": "sfdfffff",
+      "id": 8
     },
     {
-      "title": "max",
-      "date": "2-15-22",
-      "body": "Cracked at Wordle",
-      "id": 4
-    },
-    {
-      "title": "What a day!",
-      "date": "2-14-21",
-      "body": "Rough!",
-      "id": 5
+      "title": "sss",
+      "date": "2022-02-01",
+      "body": "rrrrrrrrrrr",
+      "id": 9
     }
   ]
 }

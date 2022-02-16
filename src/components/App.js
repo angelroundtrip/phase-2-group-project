@@ -159,6 +159,14 @@ function App() {
       method: 'DELETE'
     })
   }
+  
+  const [sort, setSort] = useState(false)
+
+  const handleSortClick = () => {
+    setSort(!sort)    
+  }
+
+  const sortedEntries = sort ? entries : entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
 
   return (
     <CleanStyle >
@@ -167,7 +175,7 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path='/'>
-          <JournalEntries entries={entries} deleteEntry={deleteEntry} />
+          <JournalEntries entries={sortedEntries} deleteEntry={deleteEntry} handleSortClick={handleSortClick} />
         </Route>
         <Route path='/new'>
           <JournalForm newJournal={newJournal} />
