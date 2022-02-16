@@ -1,20 +1,20 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   return (
-    <div className='navbar'>NavBar
-      <ul>
-        <button>
-          <Link to='/'>Entries</Link>
-        </button>
-      </ul>
+    <div className='navbar'>
+  
+      <Link to='/'>
+        <button className='navbutton'>Entries </button>
+      </Link>
 
-      <ul>
-        <button>
-          <Link to='about'>About</Link>
-        </button>
-      </ul>
+    <p>
+      <Link to='about'>
+        <button className='navbutton'> About </button>
+      </Link>
+    </p>
+     
     </div>
   )
 }

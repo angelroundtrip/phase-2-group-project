@@ -1,28 +1,16 @@
 {
   "entries": [
     {
-      "name": "Test",
-      "date": "Today",
-      "body": "Entry",
+      "name": "TEST",
+      "date": "2022-02-15",
+      "body": "This is a test.\n\nSee how this looks.",
       "id": 1
     },
     {
       "name": "Hello",
-      "date": "Today",
-      "body": "Testing the entry page and whether or not it auto expands. It doesn't but lest's so how a block of text looks like.",
+      "date": "2022-02-16",
+      "body": "Line breaks could be sorted out in the entry form.",
       "id": 2
-    },
-    {
-      "name": "adsd",
-      "date": "asdAd",
-      "body": "aDads",
-      "id": 3
-    },
-    {
-      "name": "max",
-      "date": "2-15-22",
-      "body": "Cracked at Wordle",
-      "id": 4
     }
   ]
 }

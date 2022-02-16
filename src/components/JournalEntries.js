@@ -1,22 +1,23 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import JournalListItem from './JournalListItem'
-import Card from '@mui/material/Card';
+// import Card from '@mui/material/Card';
 
 function JournalEntries({entries, deleteEntry}) {
   return (
     <div className='journal-entries'>
         <Link to='/new'>
             <button className='button'>
-                Create new
+                Create new entry
             </button>
         
         </Link>
         {/* <Card sx={{ maxWidth: 345 }}> */}
             {entries.map(entry => 
-              <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}  
-              /> 
+              <p> <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}  
+              />  </p> 
             )}
+         
           {/* </Card> */}
             
     </div>
