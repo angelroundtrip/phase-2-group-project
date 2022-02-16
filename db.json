@@ -1,18 +1,6 @@
 {
   "entries": [
     {
-<<<<<<< HEAD
-      "name": "TEST",
-      "date": "2022-02-15",
-      "body": "This is a test.\n\nSee how this looks.",
-      "id": 1
-    },
-    {
-      "name": "Hello",
-      "date": "2022-02-16",
-      "body": "Line breaks could be sorted out in the entry form.",
-      "id": 2
-=======
       "title": "Test",
       "date": "Today",
       "body": "Entry",
@@ -41,7 +29,6 @@
       "date": "2-14-21",
       "body": "Rough!",
       "id": 5
->>>>>>> ad3ffaf4e26b5b6b1682a4cb65ac2477bb3d49c6
     }
   ]
 }
