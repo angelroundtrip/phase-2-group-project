@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import JournalListItem from './JournalListItem'
 // import Card from '@mui/material/Card';
 
-function JournalEntries({entries, deleteEntry, handleSelectValue}) {
+function JournalEntries({entries, deleteEntry, handleSelectValue, updateEntry}) {
   return (
     <div className='journal-entries'>
         <Link to='/new'>
@@ -22,7 +22,7 @@ function JournalEntries({entries, deleteEntry, handleSelectValue}) {
         {/* <Card sx={{ maxWidth: 345 }}> */}
             {entries.map(entry => 
               <span key={entry.id}> 
-                <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry}/>  
+                <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry} updateEntry={updateEntry}  />  
               </span> 
             )}
          
