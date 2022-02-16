@@ -6,7 +6,7 @@ function NavBar() {
     <div className='navbar'>
   
       <Link to='/'>
-        <button className='navbutton'>Entries </button>
+        <button className='navbutton'> All Entries </button>
       </Link>
 
     <p>

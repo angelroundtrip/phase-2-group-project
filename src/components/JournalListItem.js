@@ -1,23 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 function JournalListItem({entry, deleteEntry}) {
     // const alert = (alert) => {
     //   'ALERT'
     // }
 
   return (
+   
     <div>
-        <span>{entry.title}</span> | <span>{entry.date}</span> | <span>{entry.body.slice(0, 99)}</span>
         <Link to={`/${entry.id}`}>
             <button className='expand'>Expand</button>
         </Link>
+
+        <span className='datetext'>{entry.date}</span> ║
+        <span className='titletext'>{entry.title.slice(0, 50)}</span> ║ 
+        <span className='entrytext'>{entry.body.slice(0, 69)}</span>
+
         <span>
-         <button className='trashcan' onClick= {() => deleteEntry(entry)} >
-          Delete 🗑
-        </button>
+         <button className='trashcan' onClick= {() => deleteEntry(entry)} > Delete 🗑 </button>
         </span>
+
     </div>
+   
   )
 }
 
