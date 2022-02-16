@@ -6,22 +6,19 @@ function JournalForm({newJournal}) {
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
   const [body, setBody] = useState('')
-
-  
+  const [favorited, setFavorited] = useState(false)
 
   const submitNewEntry = e => {
     e.preventDefault()
-
     const newObj = {
       title: title,
       date: date,
-      body: body
+      body: body,
+      favorited: favorited
     }
-    
     newJournal(newObj)
-
   }
- // We want to go to the journal viewer after submitting a new entry
+
   return (
     <div className="journal-form">
       <form onSubmit={submitNewEntry}>

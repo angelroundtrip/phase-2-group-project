@@ -213,14 +213,22 @@ function App() {
     })
   }
   
-  const [sort, setSort] = useState(false)
-
-  const handleSortClick = () => {
-    setSort(!sort)    
+  
+  const updateEntry = updatedEntry => {
+    const updatedFavorites = entries.map(entry => {
+      if (entry.id === updatedEntry.id) {
+        return updatedEntry
+      } else {
+        return entry
+      }
+    })
+    setEntries(updatedFavorites)
   }
+  
+ 
 
-  const sortedEntries = sort ? entries : entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
-
+ 
+  
   return (
     <CleanStyle >
 
@@ -231,7 +239,7 @@ function App() {
       <Switch>
         
         <Route exact path='/'>
-          <JournalEntries entries={sortedEntries} deleteEntry={deleteEntry} handleSortClick={handleSortClick} />
+          <JournalEntries entries={entries} deleteEntry={deleteEntry} updateEntry={updateEntry}   />
         </Route>
        
         <Route path='/new'>
