@@ -213,13 +213,7 @@ function App() {
     })
   }
   
-  const [sort, setSort] = useState('new')
-
-  const handleSelectValue = e => {
-    setSort(e.target.value)    
-  }
-
- 
+  
   const updateEntry = updatedEntry => {
     const updatedFavorites = entries.map(entry => {
       if (entry.id === updatedEntry.id) {
@@ -231,26 +225,9 @@ function App() {
     setEntries(updatedFavorites)
   }
   
-//   const updatedItems = items.map(item => {
-//     if (item.id === updatedItem.id) {
-//       return updatedItem
-//     } else {
-//       return item;
-//     }
-//   })
-//   setItems(updatedItems)
-// } 
+ 
 
-  const newestToOldest =  entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
-  const sortedEntries = () => {
-    if (sort === 'new') {
-      return entries
-    } else if (sort === 'old') {
-      return newestToOldest
-    } else {
-      return null
-    }
-  }
+ 
   
   return (
     <CleanStyle >
@@ -262,7 +239,7 @@ function App() {
       <Switch>
         
         <Route exact path='/'>
-          <JournalEntries entries={sortedEntries()} deleteEntry={deleteEntry} handleSelectValue={handleSelectValue} updateEntry={updateEntry}   />
+          <JournalEntries entries={entries} deleteEntry={deleteEntry} updateEntry={updateEntry}   />
         </Route>
        
         <Route path='/new'>

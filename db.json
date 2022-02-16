@@ -5,21 +5,21 @@
       "date": "2022-02-10",
       "body": "hahaha",
       "id": 6,
-      "favorited": false
+      "favorited": true
     },
     {
       "title": "lsdkfjsfs",
       "date": "2022-02-13",
       "body": "sdfsfs",
       "id": 7,
-      "favorited": true
+      "favorited": false
     },
     {
       "title": "sdfsfsd",
       "date": "2022-02-15",
       "body": "sfdfffff",
       "id": 8,
-      "favorited": true
+      "favorited": false
     },
     {
       "title": "sss",
