@@ -4,25 +4,36 @@
       "title": "Sorts of sorts",
       "date": "2022-02-10",
       "body": "hahaha",
-      "id": 6
+      "id": 6,
+      "favorited": true
     },
     {
       "title": "lsdkfjsfs",
       "date": "2022-02-13",
       "body": "sdfsfs",
-      "id": 7
+      "id": 7,
+      "favorited": false
     },
     {
       "title": "sdfsfsd",
       "date": "2022-02-15",
       "body": "sfdfffff",
-      "id": 8
+      "id": 8,
+      "favorited": false
     },
     {
       "title": "sss",
       "date": "2022-02-01",
       "body": "rrrrrrrrrrr",
-      "id": 9
+      "id": 9,
+      "favorited": true
+    },
+    {
+      "title": "test",
+      "date": "2022-02-10",
+      "body": "asdasddid it wokr?",
+      "favorited": true,
+      "id": 10
     }
   ],
   "userInfo": {
