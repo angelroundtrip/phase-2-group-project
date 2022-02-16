@@ -42,6 +42,7 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
                 Create New Entry
             </button>
         </Link>
+        
         <label> Sort By: 
           <select onChange={handleSelectValue} value={sort} className='button' >
             <option value={'old'}>Oldest to Newest</option>
@@ -51,10 +52,10 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
         </label>
       
             
-            <button className='button'> Create new entry </button>
+            
        
 
-            {sortedEntries.map(entry => 
+            {sortedEntries().map(entry => 
               <span key={entry.id}> 
                 <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry} updateEntry={updateEntry}  />  
               </span> 

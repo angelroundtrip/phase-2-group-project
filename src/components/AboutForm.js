@@ -29,7 +29,7 @@ function AboutForm({updateAbout}) {
 
 
   return (
-    <div className='about-form'>
+    <div className='entry-form'>
       <p>Edit Info</p>
       <form onSubmit={handleSubmit}>
       <textarea type="text" name="name" placeholder="your name here" onChange={handleFullName}/>

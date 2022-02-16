@@ -15,10 +15,10 @@ function EntryViewer() {
   return (
     <div className='entry-viewer'>
       <h1>
-        {viewer.title}
+        Title: {viewer.title}
       </h1>
       <h2>
-        {viewer.date}
+        Date: {viewer.date}
       </h2>
       <p>
         {viewer.body}

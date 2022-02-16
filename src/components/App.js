@@ -32,7 +32,6 @@ function App() {
   .button{
     font-size: 1em;
     margin: 1em;
-    margin-left: 25%;
     padding: 0.25em 1em;
     border: 2px solid navy;
     border-radius: 3px;
@@ -41,6 +40,15 @@ function App() {
     /* -webkit-text-stroke: .2px white; */
     cursor: pointer;
   }
+  /* margin-left: 50%;
+    margin-top: 1em;
+    font-size: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid navy;
+    border-radius: 3px;
+    background-color: lightcoral;
+    color: white;
+    cursor: pointer; */
 
   .button:hover {
     background-color: turquoise;
@@ -81,6 +89,7 @@ function App() {
     background-color: gold;
     color: black;
   }
+
 
   .trashcan{
     font-size: .72em;
