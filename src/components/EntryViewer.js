@@ -15,7 +15,7 @@ function EntryViewer() {
   return (
     <div className='entry-viewer'>
       <h1>
-        {viewer.name}
+        {viewer.title}
       </h1>
       <h2>
         {viewer.date}
