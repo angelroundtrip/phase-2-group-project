@@ -25,7 +25,10 @@ function JournalListItem({entry, deleteEntry, updateEntry }) {
 
     return (
         <div>
-            <span>{entry.title}</span> | <span>{entry.date}</span> | <span>{entry.body.slice(0, 99)}</span>
+            <span className='datetext'>{entry.date}</span> ║
+            <span className='titletext'>{entry.title.slice(0, 50)}</span> ║ 
+            <span className='entrytext'>{entry.body.slice(0, 69)}</span>
+
                 <Link to={`/${entry.id}`}>
                     <button className='expand'>Expand</button>
                 </Link>

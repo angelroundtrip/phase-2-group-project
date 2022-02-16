@@ -12,10 +12,12 @@ function App() {
   
 // STYLING
   const consistentStyle = css`
-  width: 100%;
-  /* resize: both; */
-  /* overflow: auto; */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    resize: none;
+    font-family: Arial;
+    /* overflow: auto; */
+    /* min-height: 300px; */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 
   > * {
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -30,6 +32,7 @@ function App() {
   .button{
     font-size: 1em;
     margin: 1em;
+    margin-left: 25%;
     padding: 0.25em 1em;
     border: 2px solid navy;
     border-radius: 3px;
@@ -63,8 +66,9 @@ function App() {
 
   .expand{
     font-size: 1em;
-    margin: 1em;
-    /* padding: 0.25em 1em; */
+    margin: .5em;
+    margin-right: 5%;
+    padding: 0.25em 1em;
     border: 2px solid seagreen;
     border-radius: 3px;
     background-color: lavender;
@@ -81,11 +85,14 @@ function App() {
   .trashcan{
     font-size: .72em;
     margin: .1em;
-    /* padding: 0.25em 1em; */
+    margin-top: .7%;
+    padding: 0.25em 1em;
     border: 2px solid red;
     border-radius: 3px;
     background-color: beige;
     color: red;
+    float: right;
+    position: relative;
     /* -webkit-text-stroke: .2px white; */
     cursor: pointer;
   }
@@ -105,7 +112,7 @@ function App() {
     /* min-height: 80px; */
     grid-column: 1 / 4;
     max-width: 100%;
-    text-align: left;
+    /* text-align: center; */
     /* font-weight: bold; */
     font-size: 40px;
     color: navy;
@@ -124,55 +131,114 @@ function App() {
     padding: 1rem;
   }
 
-  .journal-entries {
-    grid-column: 2/4;
-    background: seashell;
-    padding: 1rem;
-    font-weight:bold;
-    /* overflow: auto; */
-    /* height: 100vh;
-    width: 100vw;  */
-    /* height: 780px */
-    /* height: 100%; */
-    position: relative;
+  .submitbtn {
+    margin-left: 50%;
+    margin-top: 1em;
+    font-size: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid navy;
+    border-radius: 3px;
+    background-color: lightcoral;
+    color: white;
+    cursor: pointer;
   }
 
-  .form-input {
-    padding: 10px;
-    color: black;
+  .submitbtn:hover {
+     background-color: turquoise;
+    color: navy;
+  }
+
+  .title-input {
+    /* padding: 10px; */
+    /* padding: 1rem; */
+    color: navy;
     border: 2px solid turquoise;
-    text-align: center;
-    width:30%;
+    display: block;
+    width: 100%;
+    height: 50px;
     background-color: transparent;
+    /* inline-size: 300px; */
+    /* word-break: break-all; */
+    font-size: 20px;
+  }
+
+  .datetext{
+    color: #44d0e7;
+  }
+
+  .titletext{
+    color: #06a2c4;
+  }
+
+  .entrytext{
+    color: navy;
+  }
+
+  .date-input {
+    /* padding: 7px; */
+    color: navy;
+    border: 2px solid turquoise;
+    text-align: 50%;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    font-size: 20px;
   }
 
   .entry-input {
-    padding: 10px;
-    color: black;
+    color: navy;
     border: 2px solid turquoise;
-    width: 936px;
-    height: 600px;
+    /* border-color: blue red black; */
+    width: 100%;
+    height: 570px;
     background-color: transparent;
+    display: block;
+    text-align: left;
   }
 
+  textarea {
+  resize: none;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+  .journal-entries {
+    grid-column: 2/4;
+    background: seashell;
+    font-weight:bold;
+    padding: 1rem;
+    overflow: auto;
+    height: 85.5vh;
+    position: relative;
+  }
 
   /* Same as journal-entries, code can be cleaner */
   .journal-form {
     grid-column: 2/4;
     background: seashell;
     padding: 1rem;
+    overflow: auto;
+    height: 85.5vh;
+    position: relative;
   }
 
   .about {
     grid-column: 2/4;
     background: seashell;
     padding: 1rem;
+    overflow: auto;
+    height: 85.5vh;
+    position: relative;
   }
 
   .entry-viewer {
+    color: navy;
     grid-column: 2/4;
     background: seashell;
     padding: 1rem;
+    overflow: auto;
+    height: 85.5vh;
+    position: relative;
   }
   `;
 
@@ -234,7 +300,7 @@ function App() {
 
       <Header/>
 
-      <NavBar/>
+      <NavBar />
      
       <Switch>
         
