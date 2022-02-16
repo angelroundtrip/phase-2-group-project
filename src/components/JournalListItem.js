@@ -9,13 +9,16 @@ function JournalListItem({entry, deleteEntry}) {
   return (
     <div>
         <span>{entry.title}</span> | <span>{entry.date}</span> | <span>{entry.body.slice(0, 99)}</span>
-        <Link to={`/${entry.id}`}>
-            <button className='expand'>Expand</button>
-        </Link>
+            <Link to={`/${entry.id}`}>
+                <button className='expand'>Expand</button>
+            </Link>
         <span>
-         <button className='trashcan' onClick= {() => deleteEntry(entry)} >
-          Delete 🗑
-        </button>
+            <button className='trashcan' onClick= {() => deleteEntry(entry)} >
+                Delete 🗑
+            </button>
+            <button>
+                Favorite ⭐
+            </button>
         </span>
     </div>
   )

@@ -213,14 +213,24 @@ function App() {
     })
   }
   
-  const [sort, setSort] = useState(false)
+  const [sort, setSort] = useState('new')
 
-  const handleSortClick = () => {
-    setSort(!sort)    
+  const handleSelectValue = e => {
+    setSort(e.target.value)    
   }
 
-  const sortedEntries = sort ? entries : entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
 
+  const newestToOldest =  entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
+  const sortedEntries = () => {
+    if (sort === 'new') {
+      return entries
+    } else if (sort === 'old') {
+      return newestToOldest
+    } else {
+      return null
+    }
+  }
+  
   return (
     <CleanStyle >
 
@@ -231,7 +241,7 @@ function App() {
       <Switch>
         
         <Route exact path='/'>
-          <JournalEntries entries={sortedEntries} deleteEntry={deleteEntry} handleSortClick={handleSortClick} />
+          <JournalEntries entries={sortedEntries()} deleteEntry={deleteEntry} handleSelectValue={handleSelectValue} />
         </Route>
        
         <Route path='/new'>
