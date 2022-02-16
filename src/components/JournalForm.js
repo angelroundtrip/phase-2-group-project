@@ -29,16 +29,16 @@ function JournalForm({newJournal}) {
       <span>
         <input className='form-input' type='text' placeholder='Title' value={title} onChange={e => setTitle(e.target.value)} />
       </span>
-
+  
       <span>
-        <input className='form-input' type='text' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
+        <input className='form-input' type='date' placeholder='Date' value={date} onChange={e => setDate(e.target.value)} />
       </span> 
 
       <p>
-        <textarea className='entry-input' type='text' placeholder='Entry' value={body} onChange={e => setBody(e.target.value)} />
+        <input className='entry-input' type='text' placeholder='Entry' value={body} onChange={e => setBody(e.target.value)} />
       </p>
 
-        <div><button className='button' type='submit' style={{align:'center'}}> SUBMIT</button></div>
+        <div><button className='button' type='submit'> SUBMIT</button></div>
         
       </form>
     </div>

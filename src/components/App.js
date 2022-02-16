@@ -7,14 +7,14 @@ import NavBar from './NavBar';
 import styled, {css} from 'styled-components';
 import EntryViewer from './EntryViewer';
 import React, {useState, useEffect} from 'react'
-// import '../App.css'
 
 function App() {
+  
 // STYLING
   const consistentStyle = css`
   width: 100%;
   /* resize: both; */
-  overflow: auto;
+  /* overflow: auto; */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 
   > * {
@@ -23,38 +23,81 @@ function App() {
 `;
 
   const CleanStyle = styled.div`
-   display: grid;
-  /* grid-template: auto 1fr auto / auto 1fr auto; */
-  ${consistentStyle}
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+   ${consistentStyle}
 
   .button{
     font-size: 1em;
     margin: 1em;
     padding: 0.25em 1em;
-    border: 2px solid palevioletred;
+    border: 2px solid navy;
     border-radius: 3px;
     background-color: lightcoral;
-    color: navy;
-    -webkit-text-stroke: .2px white;
+    color: white;
+    /* -webkit-text-stroke: .2px white; */
     cursor: pointer;
   }
 
   .button:hover {
     background-color: turquoise;
-    color: white;
+    color: navy;
+  }
+
+  .navbutton{
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid navy;
+    border-radius: 3px;
+    background-color: #88bacd;
+    color: navy;
+    /* -webkit-text-stroke: .2px white; */
+    cursor: pointer;
+  }
+
+  .navbutton:hover {
+    background-color: seashell;
+    color: black;
+  }
+
+  .expand{
+    font-size: 1em;
+    margin: 1em;
+    /* padding: 0.25em 1em; */
+    border: 2px solid seagreen;
+    border-radius: 3px;
+    background-color: lavender;
+    color: navy;
+    /* -webkit-text-stroke: .2px white; */
+    cursor: pointer;
+  }
+
+  .expand:hover {
+    background-color: gold;
+    color: black;
   }
 
   .trashcan{
-    border: 1px solid red;
+    font-size: .72em;
+    margin: .1em;
+    /* padding: 0.25em 1em; */
+    border: 2px solid red;
+    border-radius: 3px;
+    background-color: beige;
+    color: red;
+    /* -webkit-text-stroke: .2px white; */
     cursor: pointer;
-    background-color: white;
   }
 
   .trashcan:hover{
-    border: 1px solid black;
-    cursor: pointer;
     background-color: #ef5350;
     color: white;
+  }
+
+  .break{
+    border-color: hotpink;
+    /* width: auto; */
   }
 
 
@@ -77,24 +120,8 @@ function App() {
   .navbar {
     grid-column: 1/2;
     background: #fce1e4;
+    /* max-height: 1000px */
     padding: 1rem;
-  }
-
-  .form-input {
-    padding: 10px;
-    color: black;
-    border: 1px solid turquoise;
-    text-align: center;
-    width:30%
-  }
-
-  .entry-input {
-    padding: 10px;
-    color: black;
-    border: 1px solid turquoise;
-    width: 70%;
-    /* height: 80% */
-    /* text-align: center; */
   }
 
   .journal-entries {
@@ -102,7 +129,33 @@ function App() {
     background: seashell;
     padding: 1rem;
     font-weight:bold;
+    /* overflow: auto; */
+    /* height: 100vh;
+    width: 100vw;  */
+    /* height: 780px */
+    /* height: 100%; */
+    position: relative;
   }
+
+  .form-input {
+    padding: 10px;
+    color: black;
+    border: 2px solid turquoise;
+    text-align: center;
+    width:30%;
+    background-color: transparent;
+  }
+
+  .entry-input {
+    padding: 10px;
+    color: black;
+    border: 2px solid turquoise;
+    width: 936px;
+    height: 600px;
+    background-color: transparent;
+  }
+
+
   /* Same as journal-entries, code can be cleaner */
   .journal-form {
     grid-column: 2/4;
@@ -159,16 +212,28 @@ function App() {
       method: 'DELETE'
     })
   }
+  
+  const [sort, setSort] = useState(false)
+
+  const handleSortClick = () => {
+    setSort(!sort)    
+  }
+
+  const sortedEntries = sort ? entries : entries.slice().sort( (a, b) => new Date(b.date) - new Date(a.date))
 
   return (
     <CleanStyle >
 
       <Header/>
+
       <NavBar/>
+     
       <Switch>
+        
         <Route exact path='/'>
-          <JournalEntries entries={entries} deleteEntry={deleteEntry} />
+          <JournalEntries entries={sortedEntries} deleteEntry={deleteEntry} handleSortClick={handleSortClick} />
         </Route>
+       
         <Route path='/new'>
           <JournalForm newJournal={newJournal} />
         </Route>
@@ -179,6 +244,7 @@ function App() {
           <EntryViewer/>
         </Route>
       </Switch> 
+    
 
     </CleanStyle>
   );
