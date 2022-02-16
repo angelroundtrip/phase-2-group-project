@@ -30,5 +30,10 @@
       "body": "Rough!",
       "id": 5
     }
-  ]
+  ],
+  "userInfo": {
+    "id": 0,
+    "fullName": "Maximilien Marton",
+    "email": "maxjmarton@gmail.com"
+  }
 }
