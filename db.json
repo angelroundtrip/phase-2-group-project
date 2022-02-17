@@ -22,7 +22,6 @@
       "id": 11
     },
     {
-<<<<<<< HEAD
       "title": "Title",
       "date": "2022-02-17",
       "body": "Adding",
@@ -33,11 +32,6 @@
       "title": "adxs",
       "date": "",
       "body": "asdsd",
-=======
-      "title": "test",
-      "date": "2022-02-10",
-      "body": "asdasddid it wokr?",
->>>>>>> 1cc4dbf866708e2ae0d03eaf132ac181336d267f
       "favorited": false,
       "id": 13
     }

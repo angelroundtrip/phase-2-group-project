@@ -46,7 +46,7 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
           role='button'
           style={{textAlign: 'center'}}
           > 
-          <option disabled value={'sort'}> Sort </option>
+          <option hidden value={'sort'}> Sort </option>
           <option value={'old'}> Oldest to Newest </option>
           <option value={'new'}> Newest to Oldest </option>
           <option value={'fav'}> Favorites </option>
