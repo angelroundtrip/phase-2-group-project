@@ -25,13 +25,13 @@
       "title": "test",
       "date": "2022-02-10",
       "body": "asdasddid it wokr?",
-      "favorited": true,
+      "favorited": false,
       "id": 10
     }
   ],
   "userInfo": {
     "id": 0,
-    "fullName": "Lorenzo",
-    "email": "haha@gmail.com"
+    "fullName": "Hello",
+    "email": "hello@world.com"
   }
 }

@@ -29,12 +29,12 @@ function AboutForm({updateAbout}) {
 
 
   return (
-    <div className='entry-form'>
-      <p>Edit Info</p>
+    <div className='entry-viewer'>
+      <p>Enter Classified Information Below</p>
       <form onSubmit={handleSubmit}>
-      <textarea type="text" name="name" placeholder="your name here" onChange={handleFullName}/>
-      <textarea type="email" name="email" placeholder="your email here" onChange={handleEmail}/>
-      <button>Submit Edit</button>
+      <p><textarea className='title-input' type="text" name="name" placeholder="Your Name" onChange={handleFullName}/></p>
+      <textarea className='title-input' type="email" name="email" placeholder="Your Email" onChange={handleEmail}/>
+      <button className='submitbtn'>Submit / Edit</button>
       </form>
     </div>
   )

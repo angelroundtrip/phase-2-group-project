@@ -20,8 +20,8 @@ function About() {
 
   return (
     <div className='about'>
-      <p>If Hacked, Please Contact Me:</p>
-        <AboutDisplay  userInfo={userInfo}/> 
+      <p className='about-display' style={{color: '#c23b22', textDecorationLine: 'underline'}}>If Hacked, Please Contact</p>
+        <AboutDisplay userInfo={userInfo}/> 
         <AboutForm updateAbout={updateAbout}/>
     </div>
   )
