@@ -9,7 +9,7 @@ function AboutDisplay({userInfo}) {
       </span>
 
       <p style={{color: 'teal', fontSize: '20px'}}> Email | 
-        <span><a style={{color: 'navy', fontSize: '20px', fontWeight: 'bold', textDecoration: 'none',}} href={"mailto:" + userInfo.email}> {userInfo.email}</a> </span>
+        <span><a className="emailtext" href={"mailto:" + userInfo.email}> {userInfo.email}</a> </span>
       </p>
 
     </div>
