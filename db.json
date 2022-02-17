@@ -12,7 +12,7 @@
       "date": "2022-02-13",
       "body": "sdfsfs",
       "id": 7,
-      "favorited": true
+      "favorited": false
     },
     {
       "title": "sdfsfsd",
@@ -20,13 +20,6 @@
       "body": "sfdfffff",
       "id": 8,
       "favorited": true
-    },
-    {
-      "title": "sss",
-      "date": "2022-02-01",
-      "body": "rrrrrrrrrrr",
-      "id": 9,
-      "favorited": false
     },
     {
       "title": "test",
