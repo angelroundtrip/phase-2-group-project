@@ -14,7 +14,6 @@ function AboutForm({updateAbout}) {
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    console.log('wow')
     fetch("http://localhost:3000/userInfo/", {
       method:"PATCH",
       headers: {"Content-Type": "application/json"},

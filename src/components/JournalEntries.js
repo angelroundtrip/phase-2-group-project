@@ -12,12 +12,8 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
     
   }
 
-  console.log(sort)
 
  const sortedEntries = () => {
-  // const newestToOldest =  entries.sort( (a, b) => new Date(a.date) - new Date(b.date))
-  // const oldestToNewest =  entries.sort( (a, b) => new Date(b.date) - new Date(a.date))
-  // const favoritedEntries = entries.sort( (a, b) => a.favorited === b.favorited ? 0 : a.favorited ? -1 : 1 )
 
   if (sort === 'old') {
     return entries.sort( (a, b) => new Date(a.date) - new Date(b.date))
