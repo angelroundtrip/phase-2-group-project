@@ -8,7 +8,7 @@ function AboutDisplay({userInfo}) {
         <p className='about-display' style={{color: 'navy'}}> Name: {userInfo.fullName}</p>
       </div>
       <div>
-        <p className='about-display' style={{color: 'navy'}}> Email: <a style={{textdecoration: 'none'}} href={"mailto:" + userInfo.email}>{userInfo.email}</a></p>
+        <p className='about-display' style={{color: 'navy'}}> Email: <a href={"mailto:" + userInfo.email}>{userInfo.email}</a></p>
       </div>
     </div>
   )

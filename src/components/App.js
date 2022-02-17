@@ -12,39 +12,57 @@ function App() {
   
 // STYLING
 const consistentStyle = css`
-width: 100%;
-resize: none;
-font-family: Arial;
-/* overflow: auto; */
-/* min-height: 300px; */
-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  resize: none;
+  font-family: Arial;
+  /* overflow: auto; */
+  /* min-height: 300px; */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
 
 > * {
-border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1); 
 }
 `;
 
 const CleanStyle = styled.div`
-display: grid;
-grid-template: auto 1fr auto / auto 1fr auto;
-${consistentStyle}
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  ${consistentStyle}
 
 .button{
-font-size: 1em;
-margin: 1em;
-margin-left: 25%;
-padding: 0.25em 1em;
-border: 2px solid navy;
-border-radius: 3px;
-background-color: lightcoral;
-color: white;
-/* -webkit-text-stroke: .2px white; */
-cursor: pointer;
+  font-size: 1em;
+  margin: 1em;
+  margin-left: 25%;
+  padding: 0.25em 1em;
+  border: 2px solid navy;
+  border-radius: 3px;
+  background-color: lightcoral;
+  color: white;
+  /* -webkit-text-stroke: .2px white; */
+  cursor: pointer;
 }
 
 .button:hover {
-background-color: turquoise;
-color: navy;
+  background-color: turquoise;
+  color: navy;
+}
+
+.linkbutton{
+  font-size: 1em;
+  margin: 1em;
+  margin-left: 25%;
+  padding: 0.25em 1em;
+  border: 2px solid navy;
+  border-radius: 3px;
+  background-color: lightcoral;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkbutton:hover {
+  background-color: turquoise;
+  color: navy;
 }
 
 .navbutton{
@@ -65,45 +83,81 @@ color: black;
 }
 
 .expand{
-font-size: 1em;
-margin: .5em;
-margin-right: 5%;
-padding: 0.25em 1em;
-border: 2px solid seagreen;
-border-radius: 3px;
-background-color: lavender;
-color: navy;
-/* -webkit-text-stroke: .2px white; */
-cursor: pointer;
+  font-size: .8em;
+  margin: .5em;
+  margin-right: 5%;
+  padding: 0.25em 1em;
+  border: 2px solid seagreen;
+  border-radius: 3px;
+  background-color: lavender;
+  color: navy;
+  float: left;
+  cursor: pointer;
 }
 
 .expand:hover {
-background-color: gold;
-color: black;
-}
-
-.trashcan{
-font-size: .72em;
-margin: .1em;
-margin-top: .7%;
-padding: 0.25em 1em;
-border: 2px solid red;
-border-radius: 3px;
-background-color: beige;
-color: red;
-float: right;
-position: relative;
-/* -webkit-text-stroke: .2px white; */
-cursor: pointer;
-}
-
-.trashcan:hover{
-background-color: #ef5350;
+background-color: #B399D4;
 color: white;
 }
 
+.favbutton{
+  font-size: .8em;
+  margin: .5em;
+  margin-right: 5%;
+  padding: 0.25em 1em;
+  border: 2px solid seagreen;
+  border-radius: 3px;
+  background-color: #f6f7B0;
+  color: navy;
+  /* float: left; */
+  /* -webkit-text-stroke: .2px white; */
+  cursor: pointer;
+}
+
+.favbutton:hover {
+  background-color: gold;
+  color: black;
+}
+
+.favbuttonc {
+  font-size: .8em;
+  margin: .5em;
+  margin-right: 5%;
+  padding: 0.25em 1em;
+  border: 2px solid seagreen;
+  border-radius: 3px;
+  background-color: gold;
+  color: navy;
+  /* -webkit-text-stroke: .2px white; */
+  cursor: pointer;
+}
+
+.favbuttonc:hover {
+  background-color: #f6f7B0;
+  color: black;
+}
+
+.trashcan{
+  font-size: .72em;
+  margin: .1em;
+  margin-top: .5%;
+  padding: 0.25em 1em;
+  border: 2px solid red;
+  border-radius: 3px;
+  background-color: beige;
+  color: red;
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.trashcan:hover{
+  background-color: #ef5350;
+  color: white;
+}
+
 .break{
-border-color: hotpink;
+  border-color: hotpink;
 /* width: auto; */
 }
 
@@ -214,12 +268,12 @@ position: relative;
 
 /* Same as journal-entries, code can be cleaner */
 .journal-form {
-grid-column: 2/4;
-background: seashell;
-padding: 1rem;
-overflow: auto;
-height: 85.5vh;
-position: relative;
+  grid-column: 2/4;
+  background: seashell;
+  padding: 1rem;
+  overflow: auto;
+  height: 85.5vh;
+  position: relative;
 }
 
 .about-form {

@@ -2,10 +2,6 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 function JournalListItem({entry, deleteEntry, updateEntry }) {
-    // const alert = (alert) => {
-    //   'ALERT'
-    // }
-
 
     const toggleFavorite = () => {
 
@@ -36,7 +32,7 @@ function JournalListItem({entry, deleteEntry, updateEntry }) {
                 <button className='trashcan' onClick= {() => deleteEntry(entry)} >
                     Delete 🗑
                 </button>
-                {entry.favorited ? <button onClick={() => toggleFavorite(entry)}>Favorite ★</button> : <button onClick={() => toggleFavorite(entry)}>Favorite ☆</button> }
+                {entry.favorited ? <button className='favbuttonc' onClick={() => toggleFavorite(entry)}>Favorite ★</button> : <button className='favbutton' onClick={() => toggleFavorite(entry)}>Favorite ☆</button> }
             </span>
         </div>
     )

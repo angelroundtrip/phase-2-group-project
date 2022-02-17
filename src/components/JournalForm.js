@@ -14,7 +14,7 @@ function JournalForm({newJournal}) {
       date: date,
       body: body,
       favorited: favorited
-    }
+    } 
     newJournal(newObj)
   }
 

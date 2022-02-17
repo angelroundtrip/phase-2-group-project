@@ -12,7 +12,7 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
     
   }
 
-  console.log(sort)
+  // console.log(sort)
 
  const sortedEntries = () => {
   // const newestToOldest =  entries.sort( (a, b) => new Date(a.date) - new Date(b.date))
@@ -37,22 +37,30 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
   return (
     <div className='journal-entries'>
 
-        <Link to='/new'>
-            <button className='button'>
-                Create New Entry
-            </button>
+        <Link 
+          className='linkbutton'
+          role='button'
+          to='/new'
+          >
+                
+          Create New Entry
+
         </Link>
-        
-        <label> Sort By: 
-          <select onChange={handleSelectValue} value={sort} className='button' >
+
+        <span style={{color: 'navy'}}></span>
+          
+          <select 
+              onChange={handleSelectValue} 
+              value={sort} 
+              className='linkbutton'
+              role='button'
+              style={{textAlign: 'center'}}
+            > 
+            <option>Sort</option>
             <option value={'old'}>Oldest to Newest</option>
             <option value={'new'}>Newest to Oldest</option>
             <option value={'fav'}>Favorites</option>
           </select>
-        </label>
-      
-            
-            
        
 
             {sortedEntries().map(entry => 
