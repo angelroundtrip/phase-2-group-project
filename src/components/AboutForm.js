@@ -35,7 +35,7 @@ function AboutForm({updateAbout}) {
 
       <textarea className='title-input' type="email" name="email" placeholder="Your Email" onChange={handleEmail}/>
 
-      <button className='submitbtn'>Update</button>
+      <button className='submitbtn'>Update Info </button>
 
       </form>
       
