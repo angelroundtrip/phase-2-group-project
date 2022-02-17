@@ -3,12 +3,12 @@ import React from 'react'
 function AboutDisplay({userInfo}) {
 
   return (
-    <div className='about-display'>
+    <div >
       <div>
-        <p>Name: {userInfo.fullName}</p>
+        <p className='about-display' style={{color: 'navy'}}> Name: {userInfo.fullName}</p>
       </div>
       <div>
-        <p>Email: <a href={"mailto:" + userInfo.email}>{userInfo.email}</a></p>
+        <p className='about-display' style={{color: 'navy'}}> Email: <a style={{textdecoration: 'none'}} href={"mailto:" + userInfo.email}>{userInfo.email}</a></p>
       </div>
     </div>
   )
