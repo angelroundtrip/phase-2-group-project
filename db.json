@@ -5,7 +5,7 @@
       "date": "2022-02-10",
       "body": "hahaha",
       "id": 6,
-      "favorited": false
+      "favorited": true
     },
     {
       "title": "lsdkfjsfs",
@@ -18,15 +18,8 @@
       "title": "Testing",
       "date": "2022-02-17",
       "body": "Testing testing ",
-      "favorited": true,
-      "id": 11
-    },
-    {
-      "title": "Title",
-      "date": "2022-02-17",
-      "body": "Adding",
       "favorited": false,
-      "id": 12
+      "id": 11
     }
   ],
   "userInfo": {
