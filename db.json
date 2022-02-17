@@ -5,40 +5,40 @@
       "date": "2022-02-10",
       "body": "hahaha",
       "id": 6,
-      "favorited": true
+      "favorited": false
     },
     {
       "title": "lsdkfjsfs",
       "date": "2022-02-13",
       "body": "sdfsfs",
       "id": 7,
-      "favorited": false
-    },
-    {
-      "title": "sdfsfsd",
-      "date": "2022-02-15",
-      "body": "sfdfffff",
-      "id": 8,
-      "favorited": false
-    },
-    {
-      "title": "sss",
-      "date": "2022-02-01",
-      "body": "rrrrrrrrrrr",
-      "id": 9,
       "favorited": true
     },
     {
-      "title": "test",
-      "date": "2022-02-10",
-      "body": "asdasddid it wokr?",
+      "title": "Testing",
+      "date": "2022-02-17",
+      "body": "Testing testing ",
+      "favorited": true,
+      "id": 11
+    },
+    {
+      "title": "Title",
+      "date": "2022-02-17",
+      "body": "Adding",
       "favorited": false,
-      "id": 10
+      "id": 12
+    },
+    {
+      "title": "adxs",
+      "date": "",
+      "body": "asdsd",
+      "favorited": false,
+      "id": 13
     }
   ],
   "userInfo": {
     "id": 0,
-    "fullName": "Hello",
-    "email": "hello@world.com"
+    "fullName": "",
+    "email": "name"
   }
 }

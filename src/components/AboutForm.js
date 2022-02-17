@@ -14,7 +14,6 @@ function AboutForm({updateAbout}) {
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    console.log('wow')
     fetch("http://localhost:3000/userInfo/", {
       method:"PATCH",
       headers: {"Content-Type": "application/json"},
@@ -24,18 +23,24 @@ function AboutForm({updateAbout}) {
       }), 
     })
     .then((r)=> r.json())
-    .then((updatedInfo) =>updateAbout(updatedInfo))
+    .then((updatedInfo) => updateAbout(updatedInfo))
   }
 
-
   return (
-    <div className='entry-viewer'>
-      <p>Enter Classified Information Below</p>
+    <div className='viewers'>
+      
+      <p style={{fontWeight: 'bold', fontSize: '20px', color: '#c23b22'}}> Enter Classified Information Below </p>
+
       <form onSubmit={handleSubmit}>
+
       <p><textarea className='title-input' type="text" name="name" placeholder="Your Name" onChange={handleFullName}/></p>
+
       <textarea className='title-input' type="email" name="email" placeholder="Your Email" onChange={handleEmail}/>
+
       <button className='submitbtn'>Submit / Edit</button>
+
       </form>
+      
     </div>
   )
 }

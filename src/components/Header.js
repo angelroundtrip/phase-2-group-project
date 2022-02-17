@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className='header'>
         <header>
-            Reactions
+            Reactions Journal
         </header>
     </div>
   )

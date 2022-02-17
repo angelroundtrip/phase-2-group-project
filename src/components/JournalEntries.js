@@ -5,7 +5,7 @@ import JournalListItem from './JournalListItem'
 function JournalEntries({entries, deleteEntry, updateEntry}) {
 
 
-  const [sort, setSort] = useState('old')
+  const [sort, setSort] = useState('sort')
 
   const handleSelectValue = e => {
     setSort(e.target.value)
@@ -31,43 +31,37 @@ function JournalEntries({entries, deleteEntry, updateEntry}) {
   }  
  }
 
-    
-
-
   return (
-    <div className='journal-entries'>
+    <div className='viewers'>
 
         <Link 
           className='linkbutton'
           role='button'
           to='/new'
-          >
-                
+          fontWeight='lighter'
+          >    
           Create New Entry
-
         </Link>
 
-        <span style={{color: 'navy'}}></span>
-          
-          <select 
-              onChange={handleSelectValue} 
-              value={sort} 
-              className='linkbutton'
-              role='button'
-              style={{textAlign: 'center'}}
-            > 
-            <option>Sort</option>
-            <option value={'old'}>Oldest to Newest</option>
-            <option value={'new'}>Newest to Oldest</option>
-            <option value={'fav'}>Favorites</option>
-          </select>
-       
+        <select 
+          onChange={handleSelectValue} 
+          value={sort} 
+          className='linkbutton'
+          role='button'
+          style={{textAlign: 'center'}}
+          > 
+          <option disabled value={'sort'}> Sort </option>
+          <option value={'old'}> Oldest to Newest </option>
+          <option value={'new'}> Newest to Oldest </option>
+          <option value={'fav'}> Favorites </option>
+        </select>
+      
 
-            {sortedEntries().map(entry => 
-              <span key={entry.id}> 
-                <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry} updateEntry={updateEntry}  />  
-              </span> 
-            )}
+          {sortedEntries().map(entry => 
+            <span key={entry.id}> 
+              <hr className='break'/> <JournalListItem key={entry.id} entry={entry} deleteEntry={deleteEntry} updateEntry={updateEntry}  />  
+            </span> 
+          )}
             
     </div>
   )

@@ -20,7 +20,7 @@ function JournalForm({newJournal}) {
 
  // We want to go to the journal viewer after submitting a new entry
   return (
-    <div className="journal-form">
+    <div className="viewers">
       <form onSubmit={submitNewEntry}>
 
       <div><button className='submitbtn' type='submit'> Submit </button></div>
@@ -37,7 +37,8 @@ function JournalForm({newJournal}) {
       <p>
         <textarea 
           className='entry-input' 
-          type='text' placeholder='Enter Your Reactions Here' 
+          type='text' 
+          placeholder='Enter Your Reactions Here' 
           value={body} 
           onChange={e => setBody(e.target.value)} 
           // onKeyDown makes tab/indent work. It was broken before. Code is odd though. 

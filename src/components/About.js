@@ -19,8 +19,8 @@ function About() {
   }
 
   return (
-    <div className='about'>
-      <p className='about-display' style={{color: '#c23b22', textDecorationLine: 'underline'}}>If Hacked, Please Contact</p>
+    <div className='viewers'>
+      <p className='about-display' style={{color: '#c23b22', fontWeight: 'bolder', fontSize: '20px'}}>If Hacked, Please Contact</p>
         <AboutDisplay userInfo={userInfo}/> 
         <AboutForm updateAbout={updateAbout}/>
     </div>
