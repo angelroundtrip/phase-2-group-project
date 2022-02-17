@@ -17,12 +17,16 @@ function About() {
   const updateAbout = (updatedInfo) =>{
     setUserInfo(updatedInfo)
   }
-
+  const [showForm,setShowForm] = useState(false)
+  const hideForm = () => {
+    setShowForm(!showForm)
+  }
   return (
     <div className='viewers'>
       <p className='about-display' style={{color: '#c23b22', fontWeight: 'bolder', fontSize: '20px'}}>If Hacked, Please Contact</p>
         <AboutDisplay userInfo={userInfo}/> 
-        <AboutForm updateAbout={updateAbout}/>
+        <button onClick={hideForm} className='submitbtn'>Edit My Info</button>
+        {showForm ? <AboutForm updateAbout={updateAbout}/> : null}
     </div>
   )
 }

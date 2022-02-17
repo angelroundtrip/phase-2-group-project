@@ -248,6 +248,15 @@ function App() {
     height: 85.5vh;
     position: relative;
   }
+  .emailtext{
+    color: navy;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .emailtext:hover{
+    color: blue;
+  }
   `;
 
 // Important code

@@ -27,17 +27,15 @@ function AboutForm({updateAbout}) {
   }
 
   return (
-    <div className='viewers'>
+    <div >
       
-      <p style={{fontWeight: 'bold', fontSize: '20px', color: '#c23b22'}}> Enter Classified Information Below </p>
-
       <form onSubmit={handleSubmit}>
 
       <p><textarea className='title-input' type="text" name="name" placeholder="Your Name" onChange={handleFullName}/></p>
 
       <textarea className='title-input' type="email" name="email" placeholder="Your Email" onChange={handleEmail}/>
 
-      <button className='submitbtn'>Submit / Edit</button>
+      <button className='submitbtn'>Update Info </button>
 
       </form>
       

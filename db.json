@@ -12,13 +12,13 @@
       "date": "2022-02-13",
       "body": "sdfsfs",
       "id": 7,
-      "favorited": false
+      "favorited": true
     },
     {
       "title": "Testing",
       "date": "2022-02-17",
       "body": "Testing testing ",
-      "favorited": true,
+      "favorited": false,
       "id": 11
     },
     {
@@ -38,7 +38,7 @@
   ],
   "userInfo": {
     "id": 0,
-    "fullName": "t",
-    "email": "t"
+    "fullName": "Ada Lovelace",
+    "email": "alovelace@lookmeup.com"
   }
 }
