@@ -5,7 +5,7 @@ function JournalForm({newJournal}) {
   const [title, setTitle] = useState('')
   const [date, setDate] = useState('')
   const [body, setBody] = useState('')
-  const [favorited, setFavorited] = useState(false)
+  const [favorited] = useState(false)
 
   const submitNewEntry = e => {
     e.preventDefault()
