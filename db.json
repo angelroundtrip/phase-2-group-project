@@ -32,7 +32,7 @@
       "title": "test",
       "date": "2022-02-10",
       "body": "asdasddid it wokr?",
-      "favorited": true,
+      "favorited": false,
       "id": 10
     }
   ],
