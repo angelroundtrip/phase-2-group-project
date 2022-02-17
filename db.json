@@ -12,7 +12,7 @@
       "date": "2022-02-13",
       "body": "sdfsfs",
       "id": 7,
-      "favorited": false
+      "favorited": true
     },
     {
       "title": "Testing",
@@ -22,24 +22,11 @@
       "id": 11
     },
     {
-<<<<<<< HEAD
       "title": "Title",
       "date": "2022-02-17",
       "body": "Adding",
       "favorited": false,
       "id": 12
-    },
-    {
-      "title": "adxs",
-      "date": "",
-      "body": "asdsd",
-=======
-      "title": "test",
-      "date": "2022-02-10",
-      "body": "asdasddid it wokr?",
->>>>>>> 1cc4dbf866708e2ae0d03eaf132ac181336d267f
-      "favorited": false,
-      "id": 13
     }
   ],
   "userInfo": {
