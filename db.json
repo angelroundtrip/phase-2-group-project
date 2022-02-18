@@ -5,7 +5,7 @@
       "date": "2022-02-10",
       "body": "hahaha",
       "id": 6,
-      "favorited": true
+      "favorited": false
     },
     {
       "title": "lsdkfjsfs",
@@ -24,7 +24,7 @@
   ],
   "userInfo": {
     "id": 0,
-    "fullName": "Ada Lovelace",
-    "email": "alovelace@lookmeup.com"
+    "fullName": "Name",
+    "email": "name@email.com"
   }
 }
