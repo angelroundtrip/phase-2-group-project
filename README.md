@@ -1,4 +1,4 @@
-Project: Reaction Journals
+Project: Reactions Journal
 
 Creators: Angel Rosario, Lorenzo Sorrells, and Maximilien Marton
 
